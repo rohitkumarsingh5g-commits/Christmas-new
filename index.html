@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merry Christmas 🎄</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Great+Vibes&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+  height:100vh;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  text-align:center;
+}
+.container{
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  width:90%;
+  max-width:400px;
+  animation:fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:2.2em;
+  color:#fff;
+  margin:15px 0;
+}
+img{
+  width:100%;
+  height:auto;
+  border-radius:15px;
+  margin-bottom:15px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+input{
+  width:100%;
+  padding:10px;
+  border:2px solid #fff;
+  border-radius:30px;
+  outline:none;
+  text-align:center;
+  margin-bottom:15px;
+  font-size:1em;
+}
+button{
+  background:transparent;
+  border:2px solid #fff;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:30px;
+  font-size:1em;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+button:hover{
+  background:#fff;
+  color:#ff4081;
+  transform:scale(1.05);
+}
+.popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#fff;
+  color:#333;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+  width:80%;
+  max-width:300px;
+  text-align:center;
+  transition:transform 0.3s ease;
+  z-index:1000;
+}
+.popup.active{transform:translate(-50%,-50%) scale(1);}
+.confetti{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:rgba(255,255,255,0.8);
+  animation:fall 4s linear infinite;
+}
+@keyframes fall{
+  0%{transform:translateY(-10vh) rotate(0);}
+  100%{transform:translateY(100vh) rotate(360deg);}
+}
+#ad-container{
+  margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <a href="https://ibb.co/5Xwkkpcb">
+    <img src="https://i.ibb.co/LDHrrjpV/image-search-1762071364344.gif" alt="Christmas Celebration">
+  </a>
+
+  <h1>Merry Christmas 🎄</h1>
+  <input type="text" id="name" placeholder="अपना नाम लिखें">
+  <button onclick="shareWhatsApp()">Share on WhatsApp 🎁</button>
+  <br><br>
+  <button onclick="showPopup()">Celebrate Now 🌟</button>
+
+  <div id="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key': '77cce5a1a06615565a729af13861d94e',
+        'format': 'iframe',
+        'height': 50,
+        'width': 320,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//orientsweptautopsy.com/77cce5a1a06615565a729af13861d94e/invoke.js"></script>
+  </div>
+</div>
+
+<div class="popup" id="popup">
+  <p>“May your Christmas be filled with joy, love, and warmth. 🎅✨”</p>
+  <br>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+function shareWhatsApp(){
+  const name=document.getElementById('name').value.trim()||'आपके दोस्त';
+  const msg=`🎄 Merry Christmas! 🎅\nआपकी ओर से ${name} की ओर से ढेरों शुभकामनाएँ ❤️\n✨ इस क्रिसमस पर खुशियाँ बाँटें 🎁`;
+  const url=`https://wa.me/?text=${encodeURIComponent(msg)}`;
+  window.open(url,'_blank');
+}
+
+function showPopup(){
+  document.getElementById('popup').classList.add('active');
+}
+function closePopup(){
+  document.getElementById('popup').classList.remove('active');
+}
+
+function createConfetti(){
+  for(let i=0;i<30;i++){
+    const c=document.createElement('div');
+    c.classList.add('confetti');
+    c.style.left=Math.random()*100+'vw';
+    c.style.background=`hsl(${Math.random()*360},100%,70%)`;
+    c.style.animationDuration=2+Math.random()*3+'s';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),5000);
+  }
+}
+setInterval(createConfetti,700);
+</script>
+
+</body>
+</html>
