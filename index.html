@@ -138,7 +138,7 @@ button:hover{
 <script>
 function shareWhatsApp(){
   const name=document.getElementById('name').value.trim()||'आपके दोस्त';
-  const msg=`🎄 Merry Christmas! 🎅\nआपकी ओर से ${name} की ओर से ढेरों शुभकामनाएँ ❤️\n✨ इस क्रिसमस पर खुशियाँ बाँटें 🎁`;
+  const msg=`🎄 Merry Christmas! 🎅\nआपकी ओर से ${name} की ओर से ढेरों शुभकामनाएँ ❤️\n✨ देखिए यह प्यारा पेज 👉 https://christmas-new-blond.vercel.app/`;
   const url=`https://wa.me/?text=${encodeURIComponent(msg)}`;
   window.open(url,'_blank');
 }
