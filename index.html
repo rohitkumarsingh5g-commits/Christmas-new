@@ -97,6 +97,9 @@ button:hover{
   0%{transform:translateY(-10vh) rotate(0);}  
   100%{transform:translateY(100vh) rotate(360deg);}  
 }  
+#ad-top{  
+  margin-bottom:15px;  
+}  
 #ad-container{  
   margin-top:20px;  
 }  
@@ -106,19 +109,18 @@ button:hover{
   
 <div class="container">  
 
-  <!-- Ad above GIF -->
-  <div style="margin-bottom:15px;">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '4cc2e3f2adae815d70b8191297afb969',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//orientsweptautopsy.com/4cc2e3f2adae815d70b8191297afb969/invoke.js"></script>
-  </div>
+  <div id="ad-top">  
+    <script type="text/javascript">  
+      atOptions = {  
+        'key': '4cc2e3f2adae815d70b8191297afb969',  
+        'format': 'iframe',  
+        'height': 50,  
+        'width': 320,  
+        'params': {}  
+      };  
+    </script>  
+    <script type="text/javascript" src="//orientsweptautopsy.com/4cc2e3f2adae815d70b8191297afb969/invoke.js"></script>  
+  </div>  
 
   <a href="https://ibb.co/rfbYNhhV">  
     <img src="https://i.ibb.co/6JvzLSSk/image-search-1762088867338.gif" alt="Christmas Celebration">  
@@ -151,7 +153,7 @@ button:hover{
 <script>  
 function shareWhatsApp(){  
   const name=document.getElementById('name').value.trim()||'आपके दोस्त';  
-  const msg=`🎄 Merry Christmas! 🎅\n${name} की ओर से ढेरों शुभकामनाएँ ❤️\n✨ आपका दिन खुशियों से भरा रहे!`;  
+  const msg=`🎄 Merry Christmas! 🎅\n${name} की ओर से ढेरों शुभकामनाएँ ❤️\n✨ आपका दिन खुशियों से भरा रहे!\n👉 देखें: https://christmas-new-g37l.vercel.app/`;  
   const url=`https://wa.me/?text=${encodeURIComponent(msg)}`;  
   window.open(url,'_blank');  
 }  
